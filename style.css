@@ -1,0 +1,273 @@
+*, *::after , *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container{
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+}
+.bg{
+    position: absolute;
+    top: 20vh;
+    left: 20vh;
+    transform: rotate(17deg);
+    font-size: 35vh;
+    font-family: 'Dancing Script', cursive;
+    background: none;
+    z-index: -999;
+    color: rgba(0, 0, 0, 0.137);
+}
+/*
+this section for design
+*/
+.img-move{
+    position: relative;
+}
+.design{
+    position: absolute;
+    top: 52%;
+    left: 30%;
+    transform: translate(-100%,-50%);
+    border: transparent;
+    border-bottom: solid;
+    width: 50vh;
+    height: 50vh;
+    text-align: center;
+}
+.design h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.design-logo{
+    width: 250px;
+    position: absolute;
+    top: -30vh;
+    /* left: -20vh; */
+    transition: ease-in-out .5s;
+}
+/*
+this section is for login page 
+*/
+.card{
+    margin: 0 20vh 5vh 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40vh;
+    height: 50vh;
+    transition: linear .5s;
+    border-radius: 20px;
+}
+/*
+img selector
+*/
+.card img{
+    width: 100px;
+    
+}
+.login-face {
+    
+    transition: ease-in-out .7s;
+}
+.login-blob{
+    transform: translate(-100px,  0px);
+    animation: wave 2s linear infinite alternate ;
+}
+
+
+
+/*
+login selcetor
+*/
+.card-login{
+    margin: 5px 0;
+    text-align: center;
+    display: block;
+}
+.login-name , .login-password{
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    text-align: center;
+    height: 30px;
+    background: rgba(68, 68, 65, 0.459);
+    transition: .4s ease-in-out ;
+    position: relative;
+}
+input[type="submit"]{
+    outline: none;
+    background: pink;
+    border: none;
+    width: 20vh;
+    height: 30px;
+    border-radius: 40px;
+}
+.input-name , .input-password { 
+    z-index: -1;
+    position: absolute;
+    transform: translate(-22vh,3vh);
+    color: rgba(0, 0, 0, 0.589);
+transition: ease-in-out .3s;
+}
+
+/*
+animation and hover stuff
+*/
+input[type="submit"]:hover{
+    background-color: rgb(248, 82, 110);
+}
+
+.login-name:focus , .login-password:focus{
+    border-radius: 50px;
+
+} 
+
+.card:hover {
+    box-shadow: 5px 0px 20px black;
+    background: rgba(212, 212, 212, 0.199);
+}
+.img-move:hover img:nth-child(4){
+    transform: rotateY(50deg) translate(40px) ;
+}   
+.img-move:hover img:nth-child(3){
+    transform: rotateY(50deg) translate(20px)  ;
+    opacity: .8;
+}  
+.img-move:hover img:nth-child(2){
+    transform: rotateY(50deg) translate(0px) ;
+    opacity: .6;
+}  
+.img-move:hover img:nth-child(1){
+    transform: rotateY(50deg) translate(-20px)  ;
+    opacity: .4
+}  
+/*
+social media and copy right
+*/
+.footer{    
+
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-70%);
+    
+}
+
+.group-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-list{
+    cursor: pointer;
+    padding: 0 40px;
+    list-style: none;
+
+}
+footer img{
+    
+    width: 40px;
+}
+.copy-right{
+    margin: 0vh 0 0 10px
+}
+/*svg shit*/
+.custom-shape-divider-bottom-1634765398 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -999;
+}
+
+.custom-shape-divider-bottom-1634765398 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 500px;
+}
+
+.custom-shape-divider-bottom-1634765398 .shape-fill {
+    fill: pink;
+}
+
+/*
+Media Selctor
+*/
+@media screen {
+    
+}
+@media screen and (max-width: 768px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+    }
+    .design{
+        position: absolute;
+        top: 10vh;
+        left: 15vh;
+        width: 80px;
+        border: transparent;
+    }
+    .design-logo{
+        top: -25vh;
+    }
+    .bg{
+        font-size: 8vh;
+        position: absolute;
+        top: 73vh;
+        left: 5vh;
+        transform: rotate(30deg);
+    }
+    .card{
+        margin: 0;
+        position: absolute;
+        top: 38vh;
+        left: 8.5vh;
+        width: 30vh;
+        height: 35vh;
+    }
+    .card:hover {
+        box-shadow: 5px 0px 20px black;
+        background: rgba(212, 212, 212, 0.199);
+    }
+
+    .footer{
+        position: absolute;
+        top: 95%;
+        left: 20%;
+        transform: translate(-20%,-90%);
+    }
+    .item-list{
+        padding: 0 20px;
+        
+    }
+    .copy-right{
+        position: relative;
+        top: 3vh;
+    }
+    
+    .custom-shape-divider-bottom-1634765398 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.4px);
+        height: 30vh;
+    }
+}
